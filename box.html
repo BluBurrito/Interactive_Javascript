@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Blue Box</title>
+
+    <style>
+
+        #box {
+            background-color: red;
+            height: 200px;
+            width: 200px;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Red Blue Box</h1>
+
+    <div id="box"></div>
+
+    <script>
+
+        var box = document.getElementById("box");
+
+        box.addEventListener("click", function(){
+            if( box.style.backgroundColor == "blue" ){
+
+                box.style.backgroundColor = "red";
+            } else {
+                box.style.backgroundColor = "blue";
+            }
+
+            
+            
+        });
+
+
+    </script>
+    
+</body>
+</html>
