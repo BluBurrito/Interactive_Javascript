@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <h1>Email Validation</h1>
+
+    <input type="text" id="emails">
+    <div id="messages"></div>
+    <button id="buttons">Submit</button>
+
+    <script>
+        const textbox = document.getElementById("emails");
+        const message = document.getElementById("messages");
+        const buttons = document.getElementById("buttons");
+
+        function validemail(email) {
+            const regex = /^EliteHaxxor@gmail\.com$/;
+            return regex.test(email);
+        }
+
+        buttons.addEventListener("click", function() {
+            var emailVal = textbox.value.trim();
+
+            if (!validemail(emailVal)) {
+                textbox.style.border = "5px solid red";
+                message.textContent = "Try again.";
+                buttons.style.color = "red";
+            } else {
+                textbox.style.border = "5px solid green";
+                message.textContent = "welcome!";
+                buttons.style.color = "green";
+            }
+        });
+    </script>
+    
+</body>
+</html>
